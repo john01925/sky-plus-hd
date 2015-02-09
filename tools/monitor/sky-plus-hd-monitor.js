@@ -12,8 +12,6 @@ findABox.then(function(box) {
 	console.log("    SERIAL:",box.serial);
 	console.log("    PHOTOS:",box.supportsPhotoViewing ? 'Yes' : 'No');
 	console.log();
-});
-
-findABox.fail(function(err) {
-	console.log("Failed to find SkyPlusHD box",err);
+}).catch(function(e) {
+	console.log("%s",e);
 });
